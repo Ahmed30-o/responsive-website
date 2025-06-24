@@ -1,33 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Responsive Portfolio</title>
+  <meta charset="UTF-8">
+  <title>Interactive Photo Gallery</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main class="container">
-    <figure>
-      <img src="images/photo1.jpg" alt="Sunset over a city skyline" />
-      <figcaption>Capturing golden hour in the heart of the city.</figcaption>
-    </figure>
-    <figure>
-      <img src="images/photo2.jpg" alt="Mountain landscape with snow" />
-      <figcaption>Exploring high altitudes and serene snowcaps.</figcaption>
-    </figure>
-    <figure>
-      <img src="images/photo3.jpg" alt="Forest trail in autumn" />
-      <figcaption>A peaceful walk through colorful woods.</figcaption>
-    </figure>
-    <figure>
-      <img src="images/photo4.jpg" alt="Ocean waves crashing on rocks" />
-      <figcaption>The raw energy of the sea captured in motion.</figcaption>
-    </figure>
-    <figure>
-      <img src="images/photo5.jpg" alt="Modern architecture skyscraper" />
-      <figcaption>Geometry and glass soaring to the sky.</figcaption>
-    </figure>
-  </main>
+  <h1>Image Preview Gallery</h1>
+
+  <div id="image">
+    Hover over an image below to display here.
+  </div>
+
+  <img src="images/photo1.jpg" alt="Cityscape at sunset"
+       onmouseover="upDate(this)" onmouseout="undo()">
+  <img src="images/photo2.jpg" alt="Snowy mountain"
+       onmouseover="upDate(this)" onmouseout="undo()">
+  <img src="images/photo3.jpg" alt="Autumn forest"
+       onmouseover="upDate(this)" onmouseout="undo()">
+
+  <script src="script.js"></script>
 </body>
 </html>
