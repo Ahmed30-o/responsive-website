@@ -1,23 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Interactive Photo Gallery</title>
+  <meta charset="UTF-8" />
+  <title>Accessible Interactive Photo Gallery</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <h1>Image Preview Gallery</h1>
+<body onload="addTabIndex()">
+  <h1>Interactive Photo Gallery</h1>
+  <div id="image">Hover over or focus on an image to display it here.</div>
 
-  <div id="image">
-    Hover over an image below to display here.
-  </div>
-
-  <img src="images/photo1.jpg" alt="Cityscape at sunset"
-       onmouseover="upDate(this)" onmouseout="undo()">
-  <img src="images/photo2.jpg" alt="Snowy mountain"
-       onmouseover="upDate(this)" onmouseout="undo()">
-  <img src="images/photo3.jpg" alt="Autumn forest"
-       onmouseover="upDate(this)" onmouseout="undo()">
+  <main class="gallery">
+    <figure>
+      <img src="images/photo1.jpg" alt="Sunset skyline" 
+           onmouseover="upDate(this)" onmouseout="undo()" 
+           onfocus="upDate(this)" onblur="undo()" />
+    </figure>
+    <figure>
+      <img src="images/photo2.jpg" alt="Snowy mountain" 
+           onmouseover="upDate(this)" onmouseout="undo()" 
+           onfocus="upDate(this)" onblur="undo()" />
+    </figure>
+    <figure>
+      <img src="images/photo3.jpg" alt="Forest in autumn" 
+           onmouseover="upDate(this)" onmouseout="undo()" 
+           onfocus="upDate(this)" onblur="undo()" />
+    </figure>
+    <figure>
+      <img src="images/photo4.jpg" alt="Ocean waves" 
+           onmouseover="upDate(this)" onmouseout="undo()" 
+           onfocus="upDate(this)" onblur="undo()" />
+    </figure>
+    <figure>
+      <img src="images/photo5.jpg" alt="Modern building" 
+           onmouseover="upDate(this)" onmouseout="undo()" 
+           onfocus="upDate(this)" onblur="undo()" />
+    </figure>
+    <figure>
+      <img src="images/photo6.jpg" alt="Desert landscape" 
+           onmouseover="upDate(this)" onmouseout="undo()" 
+           onfocus="upDate(this)" onblur="undo()" />
+    </figure>
+  </main>
 
   <script src="script.js"></script>
 </body>
